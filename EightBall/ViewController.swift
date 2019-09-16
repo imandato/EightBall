@@ -40,7 +40,13 @@ class ViewController: UIViewController {
                          "Outlook not so good",
                          "Very doubtful"]
         
-        resultLabel.text = responses.randomElement()!
+        var random: String
+        
+        repeat {
+            random = responses.randomElement()!
+        } while resultLabel.text == random
+        
+        resultLabel.text = random
     }
     
 }
